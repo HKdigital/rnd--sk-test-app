@@ -3,7 +3,7 @@ FROM node:22-bullseye-slim
 # ENV PORT=${PORT}
 
 # Needed for Coolify's healthcheck
-RUN apt-get update && sudo apt-get install -y --no-install-recommends curl wget
+RUN apt-get update && apt-get install -y --no-install-recommends curl wget
 
 COPY . /app/.
 
