@@ -2,7 +2,11 @@ FROM node:22-bullseye-slim
 
 # ENV PORT=${PORT}
 
-WORKDIR /app
+WORKDIR /app/
+
+# RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends curl wget
+
+COPY . /app/.
 
 # RUN npm install --package-lock-only
 # RUN npm ci --omit dev
