@@ -19,4 +19,4 @@ RUN pnpm run build
 
 # EXPOSE ${PORT}
 
-ENTRYPOINT ["node"]
+ENTRYPOINT ["node" "build"]
