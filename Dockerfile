@@ -23,4 +23,4 @@ WORKDIR /app/build
 
 # EXPOSE ${PORT}
 
-CMD ["node"]
+ENTRYPOINT ["sleep" "infinity"]
