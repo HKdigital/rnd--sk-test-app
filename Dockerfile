@@ -23,4 +23,4 @@ WORKDIR /app/build
 
 # EXPOSE ${PORT}
 
-ENTRYPOINT ["node"]
+CMD ["node"]
