@@ -1,6 +1,7 @@
 {
 	"name": "sk-test-app",
 	"version": "0.0.1",
+  "packageManager": "pnpm@9.5.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
