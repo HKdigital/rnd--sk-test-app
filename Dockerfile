@@ -4,7 +4,7 @@ FROM node:22-bullseye-slim
 
 # Install dependencies
 
-RUN apt-get update && apt-get install -y --no-install-recommends curl wget
+RUN apt-get update && apt-get install -y --no-install-recommends curl wget sleep
 
 RUN npm i -g pnpm
 
