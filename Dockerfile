@@ -2,7 +2,7 @@ FROM node:22-bullseye-slim
 
 # ENV PORT=${PORT}
 
-WORKDIR /
+WORKDIR /app
 
 # RUN npm install --package-lock-only
 # RUN npm ci --omit dev
