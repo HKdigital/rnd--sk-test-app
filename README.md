@@ -1,38 +1,51 @@
-# create-svelte
+# Sveltekit test app
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+## About
 
-## Creating a project
+This is a [Sveltekit](https://kit.svelte.dev/) project. The web application productes by this project has no purpose. The project is used to try out various technologies, such as:
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [Sveltekit](https://kit.svelte.dev/)
+- [Skeleton Next](https://next.skeleton.dev)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Docker](https://www.docker.com/)
+- [Coolify](https://coolify.io/)
+
+## Installation
+
+Clone the repository and install dependencies
 
 ```bash
 # create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+pnpm install
 ```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Run the project in development mode
 
 ```bash
-npm run dev
+# Run the project (see package.json)
+pnpm run dev
 
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
 ```
 
-## Building
+## Build and preview
 
-To create a production version of your app:
+Build the project and preview the build
 
 ```bash
-npm run build
+# Build the project in the build folder (see package.json)
+pnpm run build
 ```
 
-You can preview the production build with `npm run preview`.
+```bash
+# Preview the production build (build first)
+pnpm run preview
+```
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Deploy
+
+The Dockerfile in the `docker` folder can be used to create a docker image. Or can be used by services such a [Coolify](https://coolify.io/) to deploy the project.
+
