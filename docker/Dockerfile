@@ -1,19 +1,20 @@
 FROM node:22-bullseye-slim
 
-# ENV PORT=${PORT}
+ENV PORT=3000
 
 # Install dependencies
 
-RUN apt-get update && apt-get install -y --no-install-recommends curl wget
+# RUN apt-get update && apt-get install -y --no-install-recommends curl wget
 
 RUN npm i -g pnpm
 
 # Build app
 
-COPY . /app/.
+COPY ../. /app/.
 
 WORKDIR /app
 
+RUN rm -rf /app/node_modules
 RUN pnpm install --frozen-lockfile
 RUN pnpm run build
 
@@ -21,6 +22,6 @@ RUN pnpm run build
 
 WORKDIR /app/build
 
-# EXPOSE ${PORT}
+EXPOSE ${PORT}
 
-CMD ["node"]
+ENTRYPOINT ["node", "index.js"]
